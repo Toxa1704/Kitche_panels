@@ -24,7 +24,7 @@ body {
     font-weight: 400;
     color: #000000;
     max-width: 1440px;
-    padding: 0 130px;
+    padding: 0 60px;
 }
 
 .header {
@@ -43,7 +43,7 @@ body {
 }
 
 span {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .header-nav {
@@ -165,7 +165,7 @@ input[type="submit"]:hover,
     justify-content: space-between;
     align-items: center;
     gap: 11px;
-    background-color: rgba(255, 170, 0, 0.07);
+    background-color: rgba(255, 170, 0, 0.13);
     border-radius: 34px;
     font-weight: 300;
     font-size: 24px;
@@ -259,6 +259,7 @@ input[type="submit"]:hover,
 
 .block-card.active {
     transform: scale(1, 1.05);
+    background-color: rgb(206, 140, 8, 0.7);
 }
 
 .block-card-text {
@@ -304,6 +305,7 @@ input[type="submit"]:hover,
 }
 
 #application {
+    margin: 0 auto;
     margin-top: 148px;
     display: flex;
     justify-content: space-between;
@@ -313,7 +315,7 @@ input[type="submit"]:hover,
     background-size: cover;
     background-repeat: no-repeat;
     padding: 42px 51px 28px 60px;
-    width: 1178px;
+    max-width: 1178px;
     height: 439px;
     border-radius: 70px;
 }
@@ -347,6 +349,7 @@ form {
 }
 
 textarea {
+    border: none;
     width: 323px;
     height: 143px;
     background: #FFFFFF;
@@ -358,21 +361,273 @@ textarea {
     padding-left: 23px;
     padding-top: 16px;
 }
+
 input[type="submit"] {
-width: 323px;
-height: 51px;
-background: #FFAA00;
-border-radius: 42px;
-border: none;
-font-weight: 700;
-font-size: 24px;
-line-height: 29px;
-color: #FFFFFF;
-cursor: pointer;
-transition: all 0.3s;
+    border: none;
+    width: 310px;
+    height: 51px;
+    background: #FFAA00;
+    border-radius: 42px;
+    border: none;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
 footer {
     margin-top: 148px;
-background: #25282D;
+    height: 84px;
+    background: #25282D;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.block-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    gap: 50px;
+}
+
+.block-contact-email,
+.block-contact-tel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.block-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    align-self: center;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .header-logo,
+    .text-content {
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 27px;
+        letter-spacing: 0.16em;
+    }
+
+    .header-nav {
+        font-size: 18px;
+        line-height: 22px;
+        gap: 25px;
+    }
+
+    .banner-image>img {
+        max-width: 100%;
+    }
+
+    .text-title {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    .card {
+        width: 300px;
+        gap: 9px;
+        font-size: 20px;
+        line-height: 25px;
+
+    }
+
+    .block-card {
+        max-width: 300px;
+        max-height: 253px;
+        gap: 10px;
+        border-radius: 35px;
+    }
+
+    .block-card>img {
+        height: 150px;
+        border-radius: 30px 0 0 30px;
+        position: relative;
+        top: 50px;
+        right: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .header-logo,
+    .text-content {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: 0.12em;
+    }
+
+    .header-nav {
+        font-size: 16px;
+        line-height: 22px;
+        gap: 10px;
+    }
+
+    .header-btn {
+        width: 140px;
+        height: 41px;
+        border-radius: 42px;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+    }
+
+    .banner-image>img {
+        max-width: 100%;
+    }
+
+    .banner {
+        margin-top: 90px;
+        gap: 10px;
+    }
+
+    .banner-text {
+        max-width: 450px;
+    }
+
+    .text-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .text-btn {
+        margin-top: 40px;
+        width: 170px;
+        height: 41px;
+        border-radius: 42px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .card {
+        width: 230px;
+        gap: 5px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .card>img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .reviews-block {
+        margin-top: 0;
+        padding: 80px 0;
+
+    }
+
+    .block-card {
+        max-width: 240px;
+        max-height: 200px;
+        gap: 5px;
+        border-radius: 35px;
+    }
+
+    .block-card>img {
+        height: 130px;
+        border-radius: 25px 0 0 25px;
+        position: relative;
+        top: 15px;
+        right: 5px;
+
+    }
+
+    .card-text-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .card-text-content {
+        margin-top: 4px;
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .application-title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    #name,
+    #tel {
+        width: 250px;
+        height: 41px;
+        border-radius: 42px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    textarea {
+        width: 250px;
+        height: 120px;
+        border-radius: 28px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    input[type="submit"] {
+        width: 250px;
+        height: 41px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    #advantages,
+    #catalog,
+    #reviews,
+    #application {
+        margin-top: 90px;
+    }
+    footer {
+        margin-top: 90px;
+        height: 64px;
+    }
+    .block-contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #ffffff;
+        gap: 10px;
+        font-size: 14px;
+    }
+    .block-contact-email,
+.block-contact-tel {
+    gap: 5px;
+    justify-content: center;
+}
+    .block-contact-tel>img,
+    .block-contact-email>img {
+        width: 7%;
+        height: 7%;
+
+    }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+
 }
