@@ -13,6 +13,10 @@ li {
     color: inherit;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0 auto;
     font-family: 'Inter';
@@ -77,8 +81,14 @@ span {
 }
 
 .header-btn:hover,
-.text-btn:hover {
-    transform: scale(1.1, 1.1);
+.text-btn:hover,
+input[type="submit"]:hover,
+.card-1>svg:hover,
+.card-2>svg:hover,
+.card-3>svg:hover,
+.card-4>svg:hover,
+.reviews-block>svg:hover {
+    transform: scale(1.05, 1.05);
     background-color: #CE8C08;
 }
 
@@ -125,12 +135,14 @@ span {
 }
 
 #advantages,
-#catalog {
+#catalog,
+#reviews {
     margin-top: 144px;
 }
 
 .advantagages-title,
-.catalog-title {
+.catalog-title,
+.reviews-title {
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
@@ -139,14 +151,15 @@ span {
 
 .advantages-cards {
     margin-top: 48px;
-    display: grid;
-    grid-template-columns: 380px 380px 380px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
     gap: 16px;
 }
 
 .card {
+    width: 380px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -160,6 +173,7 @@ span {
     color: #25282D;
     padding: 5px;
 }
+
 .catalog-cards {
     margin-top: 48px;
     display: flex;
@@ -167,46 +181,198 @@ span {
     align-items: center;
     gap: 20px;
 }
+
 .card-1,
 .card-2,
 .card-3,
 .card-4 {
-width: 280px;
-height: 353px;
-border-radius: 42px;
-display: flex;
-justify-content: flex-end;
-align-items: flex-end;
-flex-wrap: wrap;
-color: #ffffff;
-padding: 17px;
-gap: 10px;
+    width: 280px;
+    height: 353px;
+    border-radius: 42px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    color: #ffffff;
+    padding: 17px;
+    gap: 10px;
 }
+
 .card-1 {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.14%, #000000 106.8%), url(/image/design_1.webp);
 }
+
 .card-2 {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.14%, #000000 106.8%), url(/image/design_2.webp);
 }
+
 .card-3 {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.14%, #000000 106.8%), url(/image/design_3.webp);
 }
+
 .card-4 {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.14%, #000000 106.8%), url(/image/design_4.webp);
 }
+
 .card-1>svg,
 .card-2>svg,
 .card-3>svg,
-.card-4>svg {
-width: 31px;
-height: 31px;
-background-color: #FFAA00;
-border-radius: 5px;
-cursor: pointer;
+.card-4>svg,
+.reviews-block>svg {
+    width: 31px;
+    height: 31px;
+    background-color: #FFAA00;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
+
 .card-1-text,
 .card-2-text,
 .card-3-text,
 .card-4-text {
-padding-bottom: 3%;
+    padding-bottom: 3%;
+}
+
+.reviews-block {
+    margin-top: 48px;
+    padding: 100px 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block-card {
+    max-width: 380px;
+    max-height: 253px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    background: #F9F9F9;
+    border: 1px solid #FFAA00;
+    border-radius: 40px;
+    transition: all 0.3s;
+}
+
+.block-card.active {
+    transform: scale(1, 1.05);
+}
+
+.block-card-text {
+    padding: 16px;
+}
+
+.block-card>img {
+    max-height: 253px;
+}
+
+.card-text-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #25282D;
+}
+
+.card-text-content {
+    margin-top: 8px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #25282D;
+}
+
+.prev,
+.next {
+    position: absolute;
+    bottom: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    right: 53px;
+}
+
+.next {
+    right: 10px
+}
+
+#application {
+    margin-top: 148px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 47px;
+    background-image: url(/image/application_fon.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 42px 51px 28px 60px;
+    width: 1178px;
+    height: 439px;
+    border-radius: 70px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.application-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+#name,
+#tel {
+    width: 323px;
+    height: 51px;
+    background: #FFFFFF;
+    border-radius: 42px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #25282D;
+    padding-left: 23px;
+}
+
+textarea {
+    width: 323px;
+    height: 143px;
+    background: #FFFFFF;
+    border-radius: 28px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #25282D;
+    padding-left: 23px;
+    padding-top: 16px;
+}
+input[type="submit"] {
+width: 323px;
+height: 51px;
+background: #FFAA00;
+border-radius: 42px;
+border: none;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+color: #FFFFFF;
+cursor: pointer;
+transition: all 0.3s;
+}
+
+footer {
+    margin-top: 148px;
+background: #25282D;
 }
