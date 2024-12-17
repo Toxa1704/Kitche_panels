@@ -604,10 +604,12 @@ footer {
     #application {
         margin-top: 90px;
     }
+
     footer {
         margin-top: 90px;
         height: 64px;
     }
+
     .block-contact {
         display: flex;
         justify-content: space-between;
@@ -616,11 +618,13 @@ footer {
         gap: 10px;
         font-size: 14px;
     }
+
     .block-contact-email,
-.block-contact-tel {
-    gap: 5px;
-    justify-content: center;
-}
+    .block-contact-tel {
+        gap: 5px;
+        justify-content: center;
+    }
+
     .block-contact-tel>img,
     .block-contact-email>img {
         width: 7%;
@@ -628,6 +632,144 @@ footer {
 
     }
 }
+
 @media (min-width: 320px) and (max-width: 768px) {
+    body {
+        margin: 0 auto;
+        padding: 0 19px;
+    }
+
+    .header-nav,
+    .header-btn {
+        display: none;
+    }
+
+    .header-logo {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.18em;
+    }
+
+    .banner {
+        margin-top: 48px;
+        flex-direction: column-reverse;
+        gap: 32px;
+    }
+
+    .banner-image>img {
+        width: 282px;
+        height: 240px;
+    }
+
+    .text-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .text-content {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+
+    }
+
+    .text-btn {
+        margin: 0 auto;
+        margin-top: 27px;
+        width: 274px;
+        height: 51px;
+        font-weight: 700;
+    }
+
+    .advantagages-title {
+        margin-top: 60px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+    }
+#advantages {
+    margin-top: 61px;
+}
+    .card {
+        width: 285px;
+        height: 131px;
+        border-radius: 20.8741px;
+
+    }
+
+    .card>img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card>p {
+        font-weight: 300;
+        font-size: 14.7347px;
+        line-height: 18px;
+    }
+
+    #catalog {
+        margin-top: 32px;
+    }
+
+    .advantagages-title,
+    .catalog-title,
+    .reviews-title {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+
+    .catalog-cards {
+        margin-top: 25px;
+        flex-direction: column;
+        gap: 18px;
+    }
+#reviews {
+    margin-top: 37px;
+}
+.reviews-block {
+    margin-top: -112px;
+    padding: 130px 0;
+flex-direction: column;
+gap: 10px;
+
+}
+.block-card {
+width: 274px;
+height: 166px;
+border-radius: 30px;
+}
+.card-text-title {
+font-weight: 700;
+font-size: 14px;
+line-height: 18px;
+}
+.card-text-content {
+    margin-top: 4px;
+font-weight: 300;
+font-size: 10px;
+line-height: 12px;
+}
+
+.block-card>img {
+    max-height: 165px;
+}
+.block-card-text {
+    padding: 10px;
+}
+
+
+
+
+
+    #application,
+
+    /* #reviews, */
+    footer {
+        display: none;
+    }
 
 }
