@@ -27,7 +27,8 @@ body {
     padding: 0 60px;
 }
 
-.header-burg {
+.header-burg-list,
+.header-burg-wrapper {
     display: none;
 }
 
@@ -203,19 +204,19 @@ input[type="submit"]:hover,
 }
 
 .card-1 {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.14%, #000000 106.8%), url(/image/design_1.webp);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.14%, #000000 106.8%), url(../image/design_1.webp);
 }
 
 .card-2 {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.14%, #000000 106.8%), url(/image/design_2.webp);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.14%, #000000 106.8%), url(../image/design_2.webp);
 }
 
 .card-3 {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.14%, #000000 106.8%), url(/image/design_3.webp);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.14%, #000000 106.8%), url(../image/design_3.webp);
 }
 
 .card-4 {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.14%, #000000 106.8%), url(/image/design_4.webp);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.14%, #000000 106.8%), url(../image/design_4.webp);
 }
 
 .card-1>svg,
@@ -315,7 +316,7 @@ input[type="submit"]:hover,
     justify-content: space-between;
     align-items: center;
     gap: 47px;
-    background-image: url(/image/application_fon.webp);
+    background-image: url(../image/application_fon.webp);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 42px 51px 28px 60px;
