@@ -27,7 +27,11 @@ body {
     padding: 0 60px;
 }
 
-.header {
+.header-burg {
+    display: none;
+}
+
+.header-wrapper {
     margin-top: 48px;
     display: flex;
     justify-content: space-between;
@@ -463,7 +467,7 @@ footer {
     }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 766px) and (max-width: 992px) {
     body {
         padding: 0 10px;
     }
@@ -633,22 +637,58 @@ footer {
     }
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 766px) {
     body {
         margin: 0 auto;
         padding: 0 19px;
     }
 
-    .header-nav,
-    .header-btn {
+    .header {
         display: none;
     }
 
-    .header-logo {
-        font-weight: 300;
-        font-size: 24px;
-        line-height: 29px;
-        letter-spacing: 0.18em;
+    .header-burg-wrapper {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-burg-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .header-burg-list {
+        margin: 0 -19px;
+        padding: 0 20px;
+        padding-top: 72px;
+        background-color: #FFAA00;
+        display: none;
+    }
+
+    .header-burg-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 44px;
+        color: #000000;
+    }
+
+    .header-burg-nav>a:hover {
+        color: #ffffff;
+    }
+
+    .header-burg-btn {
+        width: 274px;
+        height: 51px;
+        margin: 49px 0 76px;
+        background: #FFAA00;
+        border: 1px solid #FFFFFF;
+        border-radius: 42px;
     }
 
     .banner {
@@ -689,9 +729,11 @@ footer {
         font-size: 24px;
         line-height: 29px;
     }
-#advantages {
-    margin-top: 61px;
-}
+
+    #advantages {
+        margin-top: 61px;
+    }
+
     .card {
         width: 285px;
         height: 131px;
@@ -727,49 +769,102 @@ footer {
         flex-direction: column;
         gap: 18px;
     }
-#reviews {
-    margin-top: 37px;
-}
-.reviews-block {
-    margin-top: -112px;
-    padding: 130px 0;
-flex-direction: column;
-gap: 10px;
 
-}
-.block-card {
-width: 274px;
-height: 166px;
-border-radius: 30px;
-}
-.card-text-title {
-font-weight: 700;
-font-size: 14px;
-line-height: 18px;
-}
-.card-text-content {
-    margin-top: 4px;
-font-weight: 300;
-font-size: 10px;
-line-height: 12px;
-}
-
-.block-card>img {
-    max-height: 165px;
-}
-.block-card-text {
-    padding: 10px;
-}
-
-
-
-
-
-    #application,
-
-    /* #reviews, */
-    footer {
-        display: none;
+    #reviews {
+        margin-top: 37px;
     }
 
+    .reviews-block {
+        margin-top: -112px;
+        padding: 130px 0;
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+    .block-card {
+        width: 274px;
+        height: 166px;
+        border-radius: 30px;
+    }
+
+    .card-text-title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .card-text-content {
+        margin-top: 4px;
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .block-card>img {
+        max-height: 165px;
+    }
+
+    .block-card-text {
+        padding: 10px;
+    }
+
+    #application {
+        width: 271px;
+        height: 651px;
+        margin-top: 28px;
+        flex-direction: column;
+        border-radius: 103px;
+        justify-content: center;
+        padding: 20px;
+        background-size: cover;
+        background-position: bottom;
+
+    }
+
+    .application-title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    form {
+        margin: 0;
+    }
+
+    #name,
+    #tel {
+        width: 237px;
+        height: 51px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        border-radius: 42px;
+    }
+
+    textarea {
+        width: 237px;
+        height: 143px;
+    }
+
+    input[type="submit"] {
+        width: 249px;
+        height: 51px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    footer {
+        margin-top: 76px;
+        height: 215px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .block-contact {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
