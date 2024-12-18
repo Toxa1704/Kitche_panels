@@ -96,6 +96,12 @@ input[type="submit"]:hover,
     transform: scale(1.05, 1.05);
     background-color: #CE8C08;
 }
+.card-1:hover,
+.card-2:hover,
+.card-3:hover,
+.card-4:hover {
+    transform: scale(1, 1.05);
+}
 
 .banner {
     margin-top: 144px;
@@ -201,6 +207,7 @@ input[type="submit"]:hover,
     color: #ffffff;
     padding: 17px;
     gap: 10px;
+    transition: all 0.3s;
 }
 
 .card-1 {
