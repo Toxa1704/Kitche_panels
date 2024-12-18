@@ -16,9 +16,16 @@ function showSlider() {
     slides[i].style.display = "none";
   }
   slides[slideIndex].style.display = "flex";
+  slides[slideIndex].style.opacity = 1;
 }
 function moveSlide(moveNext) {
-  slides[slideIndex].style.display = "none";
+  const activeSlide = slides[slideIndex]
+  const fadeOutInterval = setInterval(fadeOut, 50, activeSlide)
+  setTimeout(()=>{
+    activeSlide.style.display = "none";
+    activeSlide.style.opacity = 0;
+    clearInterval(fadeOutInterval)
+  }, 500)
   if (moveNext) {
     slideIndex++;
   } else {
@@ -31,9 +38,30 @@ function moveSlide(moveNext) {
       slideIndex = slides.length - 1;
     }
   }
-  slides[slideIndex].style.display = "flex";
-}
+  const nextSlide = slides[slideIndex];
+  nextSlide.style.opacity = 0;
+  setTimeout(()=> {
+    const fadeInInterval = setInterval(fadeIn, 50, nextSlide)
+    nextSlide.style.display = "flex";
+    setTimeout(()=>{
+      clearInterval(fadeOutInterval)
+    },500);
+  },500)
 
+};
+function fadeIn(slide) {
+  if (slide.style.opacity > 1) {
+    return
+  }
+  console.log( slide.style.opacity);
+  slide.style.opacity = parseFloat(slide.style.opacity) + 0.1;
+}
+function fadeOut(slide) {
+  if (slide.style.opacity < 0) {    
+    return
+  }
+  slide.style.opacity -= 0.1;
+}
 function nextSlide() {
   moveSlide(true);
 }
