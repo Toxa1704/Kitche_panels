@@ -44,7 +44,7 @@ function moveSlide(moveNext) {
     const fadeInInterval = setInterval(fadeIn, 50, nextSlide)
     nextSlide.style.display = "flex";
     setTimeout(()=>{
-      clearInterval(fadeOutInterval)
+      clearInterval(fadeInInterval)
     },500);
   },500)
 
