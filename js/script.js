@@ -1,4 +1,3 @@
-// Отримуємо елементи кнопок "prev" і "next", всі елементи слайдів, бургер-меню та його елементи
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 const items = document.querySelectorAll(".block-card");
@@ -7,10 +6,12 @@ const close = document.querySelector(".header-burg-close");
 const burgWrapper = document.querySelector(".header-burg-wrapper");
 const burgList = document.querySelector(".header-burg-list");
 const burgNav = document.querySelectorAll(".header-burg-nav>a");
-
+const slides = document.getElementsByClassName("block-card");
+let disabledButtons = false;
 let slideIndex = 0;
 
-const slides = document.getElementsByClassName("block-card");
+showSlider();
+
 function showSlider() {
   for (let i = 0; i <= slides.length - 1; i++) {
     slides[i].style.display = "none";
@@ -18,14 +19,18 @@ function showSlider() {
   slides[slideIndex].style.display = "flex";
   slides[slideIndex].style.opacity = 1;
 }
+
+// The moveSlide function is responsible for moving between slides in a slider, applying fade-in and fade-in effects for a smooth visual transition. The feature also temporarily disables the navigation buttons during transitions to prevent multiple taps.
+
 function moveSlide(moveNext) {
-  const activeSlide = slides[slideIndex]
-  const fadeOutInterval = setInterval(fadeOut, 50, activeSlide)
-  setTimeout(()=>{
+  disabledButtons = true;
+  const activeSlide = slides[slideIndex];
+  const fadeOutInterval = setInterval(fadeOut, 50, activeSlide);//Runs a fade-in animation for the active slide, gradually changing its transparency every 50 milliseconds.
+  setTimeout(() => {  //After 500 milliseconds, the active slide is hidden (display: "none") and its transparency is reset to 0. The interval for the fade animation is cleared.
     activeSlide.style.display = "none";
     activeSlide.style.opacity = 0;
-    clearInterval(fadeOutInterval)
-  }, 500)
+    clearInterval(fadeOutInterval);
+  }, 500);
   if (moveNext) {
     slideIndex++;
   } else {
@@ -34,52 +39,49 @@ function moveSlide(moveNext) {
   if (!slides[slideIndex]) {
     if (moveNext) {
       slideIndex = 0;
-    }else{
+    } else {
       slideIndex = slides.length - 1;
     }
   }
   const nextSlide = slides[slideIndex];
   nextSlide.style.opacity = 0;
-  setTimeout(()=> {
-    const fadeInInterval = setInterval(fadeIn, 50, nextSlide)
+  setTimeout(() => {//After 500 milliseconds, the animation of the smooth appearance of the next slide is started (setInterval(fadeIn, 50, nextSlide)) and its display on flex is set.
+    const fadeInInterval = setInterval(fadeIn, 50, nextSlide);
     nextSlide.style.display = "flex";
-    setTimeout(()=>{
-      clearInterval(fadeInInterval)
-    },500);
-  },500)
+    setTimeout(() => {//Сlears the smooth spawn interval after 500 milliseconds and re-enables the buttons by setting disabledButtons to false.
+      clearInterval(fadeInInterval);
+      disabledButtons = false;
+    }, 500);
+  }, 500);
+}
 
-};
 function fadeIn(slide) {
   if (slide.style.opacity > 1) {
-    return
+    return;
   }
-  console.log( slide.style.opacity);
   slide.style.opacity = parseFloat(slide.style.opacity) + 0.1;
 }
+
 function fadeOut(slide) {
-  if (slide.style.opacity < 0) {    
-    return
+  if (slide.style.opacity < 0) {
+    return;
   }
   slide.style.opacity -= 0.1;
 }
-function nextSlide() {
-  moveSlide(true);
-}
-function prevSlide() {
-  moveSlide(false);
-}
+
 prevButton.addEventListener("click", () => {
-  prevSlide();
+  if (!disabledButtons) {
+    moveSlide(false);
+  }
 });
 
 nextButton.addEventListener("click", () => {
-  nextSlide();
+  if (!disabledButtons) {
+    moveSlide(true);
+  }
 });
 
-// Ініціалізуємо слайдер з початковим значенням
-showSlider();
 
-// Додаємо обробник подій для бургер-меню
 burgMenu.addEventListener("click", () => {
   if (burgList.style.display === "none" || !burgList?.style?.display) {
     burgList.style.display = "block";
@@ -90,13 +92,11 @@ burgMenu.addEventListener("click", () => {
   }
 });
 
-// Додаємо обробник подій для кнопки закриття бургер-меню
 close.addEventListener("click", () => {
   burgList.style.display = "none";
   burgWrapper.style.display = "flex";
 });
 
-// Додаємо обробник подій для кожного посилання в навігації бургер-меню
 burgNav.forEach((link) => {
   link.addEventListener("click", () => {
     burgList.style.display = "none";
