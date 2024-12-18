@@ -247,17 +247,19 @@ input[type="submit"]:hover,
 }
 
 .reviews-block {
-    margin-top: 48px;
-    padding: 100px 0;
+
+    padding: 80px 0;
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s;
 }
 
 .block-card {
-    max-width: 380px;
+    margin: 0 auto;
+    max-width: 580px;
     max-height: 253px;
     display: flex;
     justify-content: space-between;
@@ -269,13 +271,13 @@ input[type="submit"]:hover,
     transition: all 0.3s;
 }
 
-.block-card.active {
-    transform: scale(1, 1.05);
-    background-color: rgb(206, 140, 8, 0.7);
-}
 
 .block-card-text {
-    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 26px;
 }
 
 .block-card>img {
@@ -309,11 +311,11 @@ input[type="submit"]:hover,
 }
 
 .prev {
-    right: 53px;
+    right: 70%;
 }
 
 .next {
-    right: 10px
+    right: 27%;
 }
 
 #application {
@@ -390,6 +392,7 @@ input[type="submit"] {
 }
 
 footer {
+    margin: 0 -20px;
     margin-top: 148px;
     height: 84px;
     background: #25282D;
@@ -458,21 +461,7 @@ footer {
 
     }
 
-    .block-card {
-        max-width: 300px;
-        max-height: 253px;
-        gap: 10px;
-        border-radius: 35px;
-    }
 
-    .block-card>img {
-        height: 150px;
-        border-radius: 30px 0 0 30px;
-        position: relative;
-        top: 50px;
-        right: 10px;
-        padding-left: 10px;
-    }
 }
 
 @media (min-width: 766px) and (max-width: 992px) {
@@ -549,21 +538,6 @@ footer {
 
     }
 
-    .block-card {
-        max-width: 240px;
-        max-height: 200px;
-        gap: 5px;
-        border-radius: 35px;
-    }
-
-    .block-card>img {
-        height: 130px;
-        border-radius: 25px 0 0 25px;
-        position: relative;
-        top: 15px;
-        right: 5px;
-
-    }
 
     .card-text-title {
         font-weight: 500;
@@ -571,11 +545,7 @@ footer {
         line-height: 20px;
     }
 
-    .card-text-content {
-        margin-top: 4px;
-        font-size: 10px;
-        line-height: 10px;
-    }
+
 
     .application-title {
         font-weight: 500;
@@ -801,7 +771,16 @@ footer {
         font-size: 14px;
         line-height: 18px;
     }
-
+    .prev {
+        right: 85%;
+    }
+    .next {
+        right: 5%;
+    }
+    .reviews-block {
+        margin: 0;
+        padding: 70px 0;
+    }
     .card-text-content {
         margin-top: 4px;
         font-weight: 300;
