@@ -22,7 +22,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+.wrapper {
     margin: 0 auto;
     font-family: 'Inter';
     font-style: normal;
@@ -378,6 +378,8 @@ input[type="submit"] {
 }
 
 footer {
+    max-width: 1440px;
+    margin: 0 auto;
     margin-top: 148px;
     height: 84px;
     background: #25282D;
@@ -411,7 +413,7 @@ footer {
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-    body {
+    .wrapper {
         padding: 0 10px;
     }
     .header-burg-list,
@@ -453,7 +455,7 @@ footer {
 }
 
 @media (min-width: 766px) and (max-width: 992px) {
-    body {
+    .wrapper {
         padding: 0 10px;
     }
     .header-burg-list,
@@ -612,7 +614,7 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 766px) {
-    body {
+    .wrapper {
         margin: 0 auto;
         padding: 0 19px;
     }
