@@ -86,7 +86,8 @@ nextButton.addEventListener("click", () => {
 
 
 burgMenu.addEventListener("click", () => {
-  if (burgList.style.display === "none" || !burgList?.style?.display) {
+  // if (burgList.style.display === "none" || !burgList?.style?.display) {
+  if (!burgList?.style?.display || burgList.style.display === "none") {
     burgList.style.display = "block";
     burgWrapper.style.display = "none";
   } else {
