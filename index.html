@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Кухонные панели на стекле</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
   </head>
   <body>
     <header class="header">
       <div class="header-wrapper">
         <div class="header-logo">
-          <a href="#">KITCH<span>EN</span></a>
+          <a href="#">KITCH<span class="logo-part">EN</span></a>
         </div>
         <nav class="header-nav">
           <a href="#">Главная</a>
@@ -23,36 +22,15 @@
         <button class="header-btn">Заказать</button>
       </div>
     </header>
+    <!--  Menu for a mobile phone -->
     <div class="header-burg-wrapper">
       <div class="header-burg-logo">
-        <a href="#">KITCH<span>EN</span></a>
+        <a href="#">KITCH<span class="logo-part">EN</span></a>
       </div>
-      <svg
-        class="header-burg-menu"
-        xmlns="http://www.w3.org/2000/svg"
-        height="24px"
-        viewBox="0 -960 960 960"
-        width="24px"
-        fill="#5f6368"
-      >
-        <path
-          d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-        />
-      </svg>
+      <svg class="header-burg-menu" xmlns="http://www.w3.org/2000/svg"height="24px"viewBox="0 -960 960 960"width="24px"fill="#5f6368"><path        d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
     </div>
     <div class="header-burg-list">
-      <svg
-        class="header-burg-close"
-        xmlns="http://www.w3.org/2000/svg"
-        height="24px"
-        viewBox="0 -960 960 960"
-        width="24px"
-        fill="#5f6368"
-      >
-        <path
-          d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-        />
-      </svg>
+      <svg class="header-burg-close"xmlns="http://www.w3.org/2000/svg"height="24px"viewBox="0 -960 960 960"width="24px"fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
       <nav class="header-burg-nav">
         <a href="#">Главная</a>
         <a href="#advantages">Преимущества</a>
@@ -62,7 +40,9 @@
       </nav>
       <button class="header-burg-btn">Заказать</button>
     </div>
+
     <main>
+      <!-- Banner block -->
       <section class="banner">
         <div class="banner-text">
           <h1 class="text-title">
@@ -78,89 +58,64 @@
           <img src="image/fon-kitchen.webp" alt="kitchen" />
         </div>
       </section>
+      <!-- Advantages block -->
       <section id="advantages">
         <h2 class="advantagages-title">Преимущества</h2>
         <div class="advantages-cards">
-          <div class="card">
+          <div class="advantages-card">
             <img src="image/icon/sponge.png" alt="sponge" class="card-img" />
             <p class="card-subtitle">Лёгкость ухода</p>
           </div>
-          <div class="card">
+          <div class="advantages-card">
             <img src="image/icon/shield.png" alt="shield" class="card-img" />
             <p class="card-subtitle">Стойкость к повреждениям</p>
           </div>
-          <div class="card">
+          <div class="advantages-card">
             <img src="image/icon/hobby.png" alt="hobby" class="card-img" />
             <p class="card-subtitle">Индивидуальный дизайн</p>
           </div>
         </div>
       </section>
+      <!-- Catalog block -->
       <section id="catalog">
         <h2 class="catalog-title">Каталог</h2>
         <div class="catalog-cards">
-          <div class="card-1">
-            <p class="card-1-text">Подробнее</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#5f6368"
-            >
-              <path
-                d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"
-              />
-            </svg>
+          <div class="card">
+            <img src="image/design_1.webp" alt="">
+            <div class="card-content">
+              <p class="card-text">Подробнее</p>
+              <svg xmlns="http://www.w3.org/2000/svg"height="24px"viewBox="0 -960 960 960"width="24px"fill="#5f6368"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+            </div>
           </div>
-          <div class="card-2">
-            <p class="card-2-text">Подробнее</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#5f6368"
-            >
-              <path
-                d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"
-              />
-            </svg>
+          <div class="card">
+            <img src="image/design_2.webp" alt="">
+            <div class="card-content">
+              <p class="card-text">Подробнее</p>
+              <svg xmlns="http://www.w3.org/2000/svg"height="24px"viewBox="0 -960 960 960"width="24px"fill="#5f6368"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+            </div>
           </div>
-          <div class="card-3">
-            <p class="card-3-text">Подробнее</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#5f6368"
-            >
-              <path
-                d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"
-              />
-            </svg>
+          <div class="card">
+            <img src="image/design_3.webp" alt="">
+            <div class="card-content">
+              <p class="card-text">Подробнее</p>
+              <svg xmlns="http://www.w3.org/2000/svg"height="24px"viewBox="0 -960 960 960"width="24px"fill="#5f6368"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+            </div>
           </div>
-          <div class="card-4">
-            <p class="card-4-text">Подробнее</p>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#5f6368"
-            >
-              <path
-                d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"
-              />
-            </svg>
+          <div class="card">
+            <img src="image/design_4.webp" alt="">
+            <div class="card-content">
+              <p class="card-text">Подробнее</p>
+              <svg xmlns="http://www.w3.org/2000/svg"height="24px"viewBox="0 -960 960 960"width="24px"fill="#5f6368"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+            </div>
           </div>
         </div>
       </section>
+      <!-- Reviews block -->
       <section id="reviews">
         <h2 class="reviews-title">Отзывы</h2>
-        <div class="reviews-block">
-          <div class="block-card ">
-            <div class="block-card-text">
+        <div class="reviews-slider">
+          <div class="slider-card ">
+            <div class="slider-card-text">
               <h4 class="card-text-title">Джейн Доу</h4>
               <p class="card-text-content">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum ab
@@ -169,14 +124,10 @@
                 iure cumque?
               </p>
             </div>
-            <img
-              src="image/reviews_1.webp"
-              alt="reviews 1"
-              class="block-card-img"
-            />
+            <img src="image/reviews_1.webp"alt="reviews 1" class="slider-card-img"/>
           </div>
-          <div class="block-card">
-            <div class="block-card-text">
+          <div class="slider-card">
+            <div class="slider-card-text">
               <h4 class="card-text-title">Джон Доу</h4>
               <p class="card-text-content">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum ab
@@ -185,14 +136,10 @@
                 iure cumque?
               </p>
             </div>
-            <img
-              src="image/reviews_2.webp"
-              alt="reviews 2"
-              class="block-card-img"
-            />
+            <img src="image/reviews_2.webp"alt="reviews 2" class="slider-card-img"/>
           </div>
-          <div class="block-card">
-            <div class="block-card-text">
+          <div class="slider-card">
+            <div class="slider-card-text">
               <h4 class="card-text-title">Джил Доу</h4>
               <p class="card-text-content">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum ab
@@ -201,38 +148,14 @@
                 iure cumque?
               </p>
             </div>
-            <img
-              src="image/reviews_3.webp"
-              alt="reviews 3"
-              class="block-card-img"
-            />
+            <img src="image/reviews_3.webp"alt="reviews 3" class="slider-card-img"/>
           </div>
-          <svg
-            class="prev"
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="#ffffff"
-          >
-            <path
-              d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"
-            />
+          <svg class="slider-prev" xmlns="http://www.w3.org/2000/svg"height="24px"viewBox="0 -960 960 960"width="24px"fill="#ffffff"><path d="M400-240 160-480l240-240 56 58-142 142h486v80H314l142 142-56 58Z"/></svg>
+          <svg class="slider-next"xmlns="http://www.w3.org/2000/svg"height="24px"viewBox="0 -960 960 960"width="24px"fill="#ffffff"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/>
           </svg>
-          <svg
-            class="next"
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="#ffffff"
-          >
-            <path
-              d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"
-            />
-          </svg>
-        </div>
+          </div>
       </section>
+      <!-- Application block -->
       <section id="application">
         <h2 class="application-title">
           Кухонные панели на стекле – стиль и практичность для вашего интерьера
@@ -240,7 +163,7 @@
         <form action="">
           <input type="text" name="name" id="name" placeholder="Имя" />
           <input type="tel" name="tel" id="tel" placeholder="Телефон" />
-          <textarea
+          <textarea 
             name="message"
             id="message"
             placeholder="Сообщение"
@@ -249,6 +172,7 @@
         </form>
       </section>
     </main>
+    
     <footer>
       <div class="block-contact">
         <a href="mailto:someone@example.com" class="block-contact-email">
@@ -271,6 +195,6 @@
         <a href="#"><img src="image/icon/instagram.png" alt="instagram" /></a>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
   </body>
 </html>

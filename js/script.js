@@ -1,12 +1,12 @@
-const prevButton = document.querySelector(".prev");
-const nextButton = document.querySelector(".next");
+const prevButton = document.querySelector(".slider-prev");
+const nextButton = document.querySelector(".slider-next");
 const items = document.querySelectorAll(".block-card");
 const burgMenu = document.querySelector(".header-burg-menu");
 const close = document.querySelector(".header-burg-close");
 const burgWrapper = document.querySelector(".header-burg-wrapper");
 const burgList = document.querySelector(".header-burg-list");
 const burgNav = document.querySelectorAll(".header-burg-nav>a");
-const slides = document.getElementsByClassName("block-card");
+const slides = document.getElementsByClassName("slider-card");
 let disabledButtons = false;
 let slideIndex = 0;
 
@@ -25,8 +25,10 @@ function showSlider() {
 function moveSlide(moveNext) {
   disabledButtons = true;
   const activeSlide = slides[slideIndex];
-  const fadeOutInterval = setInterval(fadeOut, 50, activeSlide);//Runs a fade-in animation for the active slide, gradually changing its transparency every 50 milliseconds.
-  setTimeout(() => {  //After 500 milliseconds, the active slide is hidden (display: "none") and its transparency is reset to 0. The interval for the fade animation is cleared.
+  //Runs a fade-in animation for the active slide, gradually changing its transparency every 50 milliseconds.
+  const fadeOutInterval = setInterval(fadeOut, 50, activeSlide);
+  //After 500 milliseconds, the active slide is hidden (display: "none") and its transparency is reset to 0. The interval for the fade animation is cleared.
+  setTimeout(() => {  
     activeSlide.style.display = "none";
     activeSlide.style.opacity = 0;
     clearInterval(fadeOutInterval);
@@ -45,10 +47,11 @@ function moveSlide(moveNext) {
   }
   const nextSlide = slides[slideIndex];
   nextSlide.style.opacity = 0;
-  setTimeout(() => {//After 500 milliseconds, the animation of the smooth appearance of the next slide is started (setInterval(fadeIn, 50, nextSlide)) and its display on flex is set.
+  //After 500 milliseconds, the animation of the smooth appearance of the next slide is started (setInterval(fadeIn, 50, nextSlide)) and its display on flex is set.
+  setTimeout(() => {
     const fadeInInterval = setInterval(fadeIn, 50, nextSlide);
     nextSlide.style.display = "flex";
-    setTimeout(() => {//Сlears the smooth spawn interval after 500 milliseconds and re-enables the buttons by setting disabledButtons to false.
+    setTimeout(() => {//
       clearInterval(fadeInInterval);
       disabledButtons = false;
     }, 500);
